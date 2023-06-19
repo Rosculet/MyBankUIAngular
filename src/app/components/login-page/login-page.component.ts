@@ -8,11 +8,11 @@ import { LoginService } from '../../services/login';
 })
 export class RegisterComponent {
   customer: any = {
+    name: '',
     email: '',
+    mobileNumber: '',
     pwd: '',
     role: '',
-    name: '',
-    mobileNumber: ''
   };
 
   constructor(private loginService: LoginService) {}
