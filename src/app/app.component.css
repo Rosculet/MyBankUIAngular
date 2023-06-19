@@ -1,0 +1,9 @@
+nav .active{
+  background: brown;
+  color: ghostwhite;
+}
+
+nav a.hover {
+  color: red;
+  font-weight: bold;
+}
