@@ -1,1 +1,28 @@
-<p>login-page works!</p>
+<h2>Registration Form</h2>
+
+<div>
+  <label>Email:</label>
+  <input type="email" [(ngModel)]="customer.email" name="email" required>
+</div>
+
+<div>
+  <label>Password:</label>
+  <input type="password" [(ngModel)]="customer.pwd" name="password" required>
+</div>
+
+<div>
+  <label>Role:</label>
+  <input type="text" [(ngModel)]="customer.role" name="role" required>
+</div>
+
+<div>
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="customer.name" name="name" required>
+</div>
+
+<div>
+  <label>Mobile Number:</label>
+  <input type="text" [(ngModel)]="customer.mobileNumber" name="mobileNumber" required>
+</div>
+
+<button (click)="registerUser()">Register</button>

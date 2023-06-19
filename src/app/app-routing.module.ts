@@ -6,10 +6,12 @@ import {BalanceComponent} from "./components/balance/balance.component";
 import {LoansComponent} from "./components/loans/loans.component";
 import {CardsComponent} from "./components/cards/cards.component";
 import {HomePageComponent} from "./components/home-page/home-page.component";
+import {RegisterComponent} from "./components/login-page/login-page.component";
 
 //настройка маршрутов
 
 const routes: Routes = [
+  {path: 'register', component: RegisterComponent},
   {path: '', component: HomePageComponent},
   {path: 'cards', component: CardsComponent},
   {path: 'loans', component: LoansComponent},
