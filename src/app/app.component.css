@@ -1,9 +1,11 @@
-nav .active{
-  background: brown;
-  color: ghostwhite;
+.container {
+  margin-top: 20px;
 }
 
-nav a.hover {
-  color: red;
-  font-weight: bold;
+h1 {
+  text-align: center;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: lightblue;
 }
