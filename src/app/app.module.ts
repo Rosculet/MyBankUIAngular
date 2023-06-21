@@ -11,6 +11,7 @@ import { BalanceComponent } from './components/balance/balance.component';
 import { CardsComponent } from './components/cards/cards.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -24,6 +25,7 @@ import {HttpClientModule} from "@angular/common/http";
     LoansComponent,
     BalanceComponent,
     CardsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
