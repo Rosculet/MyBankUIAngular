@@ -1,6 +1,12 @@
 <div class="container">
 
-  <h1 class="text-lg-center">Welcome to your Bank</h1>
+
+  <div class="container">
+
+    <div class="logo">
+      <img ngSrc="../assets/logo/BankLogo.png" alt="Logo" height="445" width="668">
+    </div>
+    <h1 class="text-lg-center">Welcome to your Bank</h1>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="collapse navbar-collapse">
@@ -16,17 +22,24 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/register" routerLinkActive="active register">Register</a>
+          <a class="nav-link" routerLink="/customer" routerLinkActive="active customer">Register</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/login" routerLinkActive="active register">Login</a>
+          <a class="nav-link" routerLink="/login" routerLinkActive="active login">Login</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account" routerLinkActive="active account">Account</a>
+        </li>
+
 
       </ul>
 
     </div>
   </nav>
 
+<div>
   <router-outlet></router-outlet>
 </div>
+

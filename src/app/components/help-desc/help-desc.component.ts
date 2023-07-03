@@ -10,7 +10,7 @@ export class HelpDescComponent {
   public inquiryDetails: string = "";
   constructor(private http: HttpClient) {}
   ngOnInit(): void{
-    this.http.get<string>('http://localhost:8080/contact').subscribe((response: string) => {
+    this.http.get<string>('http://localhost:8080/help').subscribe((response: string) => {
       this.inquiryDetails = response;
     });
   }

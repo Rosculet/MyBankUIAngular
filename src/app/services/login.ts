@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private baseUrl = 'http://localhost:8080'
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  registerUser(customer: any): Observable<any> {
-    const url = `${this.baseUrl}/register`;
-    return this.http.post<any>(url, customer);
+  login(username: string, password: string) {
+    const url = 'http://localhost:8080/login'; // Замените YOUR_BACKEND_API_URL на URL вашего бэкэнд сервера
+    const body = { username, password };
+    return this.http.post(url, body);
   }
+
 }

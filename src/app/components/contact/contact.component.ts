@@ -1,24 +1,23 @@
 import {Component} from '@angular/core';
-import { LoginService } from '../../services/login';
+import {ContactService} from "../../services/contact";
 
 @Component({
-  selector: 'appLogin',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  selector: 'appContact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
-export class RegisterComponent {
-  customer: any = {
+export class ContactComponent{
+  contact: any = {
     name: '',
     email: '',
-    mobileNumber: '',
-    pwd: '',
-    role: '',
+    subject: '',
+    message: '',
   };
 
-  constructor(private loginService: LoginService) {}
+  constructor(private contactService: ContactService) {}
 
-  registerUser(): void {
-    this.loginService.registerUser(this.customer)
+  registerContact(): void {
+    this.contactService.registerContact(this.contact)
       .subscribe(
         response => {
           console.log('User registered successfully');
