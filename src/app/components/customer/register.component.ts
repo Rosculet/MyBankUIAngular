@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CustomerService } from '../../services/customer';
 
+
 @Component({
   selector: 'appLogin',
   templateUrl: './register.component.html',

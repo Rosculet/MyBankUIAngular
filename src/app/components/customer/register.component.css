@@ -1,0 +1,13 @@
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
