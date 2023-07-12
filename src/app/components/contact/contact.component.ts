@@ -7,6 +7,7 @@ import {ContactService} from "../../services/contact";
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent{
+
   contact: any = {
     name: '',
     email: '',

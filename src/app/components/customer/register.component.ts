@@ -31,13 +31,29 @@ export class RegisterComponent {
         }
       );
   }
+  deleteCustomer(): void{
+    this.customerService.deleteCustomer(this.customer.customer_id)
+      .subscribe(
+        () => {
+          console.log('Customer deleted successfully');
+          // Дополнительные действия после успешного удаления, например, перенаправление или обновление списка
+        },
+        error => {
+          console.log('An error occurred while deleting the customer:', error);
+          // Обработка ошибки, например, отображение сообщения об ошибке на пользовательском интерфейсе
+        }
+      );
+  }
+
 
   searchCustomerById(): void {
     this.customerService.getCustomerById(this.customer.customer_id)
       .subscribe(
         customer => {
           // Присваивание customer_id найденного customer в account
-          this.customer.customer_id = customer.customer_id;
+          this.customer.name = customer.name;
+          this.customer.email = customer.email;
+          this.customer.mobileNumber = customer.mobileNumber;
           console.log('Customer found:', customer);
         },
         error => {

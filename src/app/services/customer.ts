@@ -22,4 +22,9 @@ export class CustomerService {
     return this.http.get(url)
       .pipe(catchError(err => err.msg));
   }
+  deleteCustomer(customer_id: bigint): Observable<any> {
+    const url = `${this.baseUrl}/delete/${customer_id}`;
+    return this.http.delete(url);
+  }
+
 }

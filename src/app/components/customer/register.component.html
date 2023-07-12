@@ -1,26 +1,29 @@
+
 <div class="container">
-  <h1>________</h1>
+  <h1>Customer interface</h1>
+
   <form (ngSubmit)="registerCustomer()" #registerForm="ngForm">
-<!--
-    <div class="modal-header">
-      <h4 class="modal-title">Customer Search</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form (ngSubmit)="searchCustomerById()" #form="ngForm">
-        <div class="form-group">
-          <label for="searchTerm">Search Term:</label>
-          <input type="text" class="form-control" id="searchTerm" required [(ngModel)]="searchTerm" name="searchTerm">
-        </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Search</button>
-      </form>
+
+    <div class="form-group">
+
+
+      <label for="customer_id">Customer ID</label>
+      <input type="text" class="form-control" id="customer_id" name="customer_id" [(ngModel)]="customer.customer_id" required>
+
+
+      <button type="button" class="btn btn-primary" (click)="searchCustomerById()">Search Customer</button>
+
+
+    <div *ngIf="customer">
+      <h4>Сustomer:</h4>
+      <p>Customer ID: {{ customer.customer_id }}</p>
+      <p>Name: {{ customer.name }}</p>
+      <p>Email: {{ customer.email }}</p>
+      <p>Mobile Number: {{ customer.mobileNumber }}</p>
+      <!-- Дополнительные поля customer -->
     </div>
 
-    <button type="button" class="btn btn-secondary btn-lg">Find customer</button>-->
 
-<!--
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.name" required>
@@ -43,19 +46,10 @@
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
 
-    <div class="form-group">
-      <label for="customer_id">Customer ID</label>
-      <input type="text" class="form-control" id="customer_id" name="customer_id" [(ngModel)]="customer.customer_id" required>
 
-
-      <button type="button" class="btn btn-primary" (click)="searchCustomerById()">Search Customer</button>
-
-    </div>-->
+    </div>&ndash;&gt;
   </form>
 
 
-
-
-
-
 </div>
+

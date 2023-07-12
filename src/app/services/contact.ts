@@ -14,4 +14,5 @@ export class ContactService {
     const url = `${this.baseUrl}/contact`;
     return this.http.post<ContactComponent>(url, contact);
   }
+
 }
