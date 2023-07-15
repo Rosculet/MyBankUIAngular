@@ -19,6 +19,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NgOptimizedImage} from "@angular/common";
 import { LoginComponent } from './components/login/login.component';
 import { AccountComponent } from './components/account/account.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -35,6 +36,7 @@ import { AccountComponent } from './components/account/account.component';
     ContactComponent,
     LoginComponent,
     AccountComponent,
+    DashboardComponent,
   ],
   imports: [
     NgbModule,
